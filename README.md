@@ -10,8 +10,8 @@ It contains the Earth Mover Distance function with CUDA implementation for PyTor
 2. Both Inputs should be defined on GPU + CUDA devices.
 
 ## EMD with PyTorch:
-**To use EMD only with PyTorch:**
-Copy the \[[emd_torch](https://github.com/vinits5/emd/blob/master/emd_torch/)\] folder to desired location.\
+**To use EMD only with PyTorch:**\
+Copy the \[[emd_torch](https://github.com/vinits5/emd/blob/master/emd_torch/)\] folder to desired location.
 
 ### Compile the CUDA code
 > cd emd_torch\
@@ -30,8 +30,8 @@ Copy the \[[emd_torch](https://github.com/vinits5/emd/blob/master/emd_torch/)\] 
 > print(p1.grad, p2.grad)
 
 ## EMD with Tensorflow:
-**To use EMD only with Tensorflow:**
-Copy the \[[emd_tf](https://github.com/vinits5/emd/blob/master/emd_tf/)\] folder to desired location.\
+**To use EMD only with Tensorflow:**\
+Copy the \[[emd_tf](https://github.com/vinits5/emd/blob/master/emd_tf/)\] folder to desired location.
 
 Change the import path in *tf_util_loss.py*.\
 ### Compile the CUDA code
