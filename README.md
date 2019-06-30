@@ -41,4 +41,5 @@ Change the import path in *tf_util_loss.py*.
 > from emd_tf import tf_util_loss\
 > loss_val = tf_util_loss.earth_mover(xyz1, xyz2)\
 > loss_val = sess.run(loss, feed_dict={xyz1: xyz1_numpy, xyz2: xyz2_numpy})\
+
 [Note: xyz1, xyz2 should be placeholders defined on GPU device]
