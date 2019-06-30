@@ -29,9 +29,9 @@ Copy the \[[emd_torch](https://github.com/vinits5/emd/blob/master/emd_torch/)\] 
 > print(p1.grad, p2.grad)
 
 ## EMD with Tensorflow:
-Copy the \[[emd_tf](https://github.com/vinits5/emd/blob/master/emd_tf/)\] folder to desired location.
+Copy the \[[emd_tf](https://github.com/vinits5/emd/blob/master/emd_tf/)\] folder to desired location.\
+Change the import path in *tf_util_loss.py*.
 
-Change the import path in *tf_util_loss.py*.\
 ### Compile the CUDA code
 > cd emd_tf/pc_distance\
 > make -f makefile
