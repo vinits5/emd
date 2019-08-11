@@ -7,6 +7,7 @@
 import torch
 import tensorflow as tf
 import helper
+from helper import print_
 import time
 from emd import EMDLoss
 from emd_tf import tf_util_loss
@@ -29,12 +30,12 @@ dist =  EMDLoss()
 p1.requires_grad = True
 p2.requires_grad = True
 
-print('PyTorch Results: ')
+print_('PyTorch Results: ',color='r', style='bold')
 s = time.time()
 cost = dist(p1, p2)
 emd_time_torch = time.time() - s
 loss_torch = (torch.sum(cost))/(p1.size()[1]*p1.size()[0])
-print('Time: {} and Loss: {}'.format(emd_time_torch, loss_torch))
+print_('Time: {} and Loss: {}'.format(emd_time_torch, loss_torch), color='bl',style='bold')
 
 
 ######################################### Tensorflow Testing #########################################
@@ -46,8 +47,8 @@ with tf.device('/gpu:0'):
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
-print('Tensorflow Results: ')
+print_('Tensorflow Results: ',color='r',style='bold')
 start_tf = time.time()
 loss_val = sess.run(loss_tf, feed_dict={t1:templates[start_idx:end_idx,0:num_point,:], t2:templates[start_idx:end_idx,0:num_point,:]})
 emd_time_tf = time.time()-start_tf
-print('Time: {} and Loss: {}'.format(emd_time_tf, loss_val))
+print_('Time: {} and Loss: {}'.format(emd_time_tf, loss_val),color='bl',style='bold')
